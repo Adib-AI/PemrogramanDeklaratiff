@@ -1,0 +1,9 @@
+	Minggu ini, Kami (Grace dan Amel) melakukan proses memasukkan pertanyaan dengan merujuk Materi Modul 1, 
+dimana Penjelasan kemarin menggunakan Modul List dan List Of List (Modul 2 dan 5) 
+untuk membuat interface yang akan muncul sebagai bentuk 
+interaksi antar User dan System.
+
+	Kami memasukkan pertanyaan-pertanyaan tentang penyakit yang dimana 
+pertanyaan ini akan dimunculkan saat program dijalankan.
+dan akan memasukkan fakta-fakta jawaban yang diinputkan user 
+ke dalam sebuah pernyataan dengan measukkan syarat tersebut.  
