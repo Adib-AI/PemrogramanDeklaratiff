@@ -1,0 +1,63 @@
+Pada Codingan Terakhir Tugas Besar ini, saya (adib) akan melakukan codingan PROLOG dengan memanfaatkan modul 4 dan dibantu
+library pada Java dan juga menggunakan library yang dimiliki oleh Prolog itu sendiri.
+
+"ask" disni adalah sebagai sebuah paramater yang digunakan sebagai jawaban yang akan diberikan dari User dan akan disimpan dalam
+sebuah list, dan dimana yes dinilai 1 dan no juga dinilai 1.
+
+"Verify" disini adalah sebuah parameter yang digunakan memverify dari jawabn dari User untuk dicocokan dengan syarat-syarat
+penyakit yang sebelumnya telah dijelaskan oleh Farhan dan Bayu.
+
+"Undo" adalah sebuah parameter yang digunakan untuk menampilkan kembali "fungsi interface"  java yang sebelumnya telah diberikan 
+jawaban (Y OR N) oleh user dan akan menampilkan pertanyaan lain dalam bentuk "fungsi interface".
+
+"pt" adalah sebuah paramater yang digunakan menyimpulkan jawaban-jawaban yang telah diberikan oleh User dan akan menampilkan
+bahwa User sedang terkena penyakit apa.
+
+ask(Patient,Question) :-
+	write(Patient),write(', Apakah '),write(Question),
+	/*read(N),
+	( (N == yes ; N == y ; N == Y)
+      ->
+       assert(yes(Question)) ;
+       assert(no(Question)), fail),*/
+
+	interface(',Apakah',Patient,Question),
+	write('Loading.'),nl,
+	sleep(1),
+	write('Loading..'),nl,
+	sleep(1),
+	write('Loading...'),nl,
+	sleep(1),
+    nl.
+
+:- dynamic yes/1,no/1.
+
+verify(P,S) :-
+   (yes(S)
+    ->
+    true ;
+    (no(S)
+     ->
+     fail ;
+     ask(P,S))).
+
+undo :- retract(yes(_)),fail.
+undo :- retract(no(_)),fail.
+undo.
+
+
+pt(Patient):-
+
+		hypothesis(Patient,Disease),
+		interface3(Patient,', Anda Kemungkinan Positif ',Disease,'.'),
+        write(Patient),write(','),write(Disease),write('.'),undo,end.
+
+end :-
+		nl,nl,nl,
+		sleep(0.7),
+
+		write('*****************************************************************'),nl,
+		sleep(0.4),
+		write("################||| THANK YOU FOR USE ME |||#####################"),nl,
+		sleep(0.4),
+		write('*****************************************************************'),nl.
