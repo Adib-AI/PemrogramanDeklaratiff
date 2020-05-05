@@ -11,3 +11,5 @@ Modul Yang Kami terapkan Di Sistem ini :
 3. Modul 4 : Diterapkan Sebagai Logic jawaban pembanding.
 4. Modul 5 : Menampung ketiga Interface.
 5. Modul 6 : Sebagai Inputan Jawaban Y/N
+
+Link Video : https://drive.google.com/open?id=1b5zoVLI8-6xz7woZfvPttUq4h1Iwex6g
